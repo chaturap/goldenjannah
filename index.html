@@ -56,10 +56,30 @@
       border-radius: 10px;
       scroll-snap-align: start;
     }
-    .banner img {
+    .banner {
+      position: relative;
+      background: url('https://chaturap.github.io/goldenjannah/assets/header.jpg') center/cover no-repeat;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+    .banner::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      height: auto;
-      display: block;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+    .banner h2 {
+      position: relative;
+      z-index: 2;
+      font-size: 2em;
     }
     .whatsapp-button {
       position: fixed;
@@ -92,6 +112,12 @@
       .logo {
         justify-content: center;
         margin-bottom: 10px;
+      }
+      .banner {
+        height: 200px;
+      }
+      .banner h2 {
+        font-size: 1.5em;
       }
     }
     @media (max-width: 480px) {
