@@ -6,9 +6,30 @@
   <title>Golden Jannah Travel Umrah</title>
   <style>
     body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-    header, footer { background-color: #d4af37; padding: 1em; text-align: center; color: white; }
-    nav a { margin: 0 15px; color: white; text-decoration: none; }
-    section { padding: 2em; }
+    header, footer {
+      background-color: #d4af37;
+      padding: 1em;
+      text-align: center;
+      color: white;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+    nav a:hover {
+      background-color: rgba(255,255,255,0.2);
+    }
+    section {
+      padding: 2em;
+    }
     .gallery {
       display: flex;
       overflow-x: auto;
@@ -16,7 +37,9 @@
       scroll-snap-type: x mandatory;
     }
     .gallery img {
+      flex-shrink: 0;
       width: 200px;
+      height: auto;
       border-radius: 10px;
       scroll-snap-align: start;
     }
@@ -36,6 +59,27 @@
       text-decoration: none;
       font-weight: bold;
       z-index: 10001;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      section {
+        padding: 1em;
+      }
+      nav a {
+        margin: 5px 10px;
+      }
+      .gallery img {
+        width: 150px;
+      }
+    }
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.2em;
+      }
+      .gallery img {
+        width: 120px;
+      }
     }
   </style>
 </head>
@@ -67,7 +111,7 @@
       <img src="https://chaturap.github.io/goldenjannah/assets/paket1.jpg" alt="Foto 2">
       <img src="https://chaturap.github.io/goldenjannah/assets/paket2.jpg" alt="Foto 3">
       <img src="https://chaturap.github.io/goldenjannah/assets/fotodpnkabah.jpg" alt="Foto 4">
-      <img src="https://chaturap.github.io/goldenjannah/assets/ibueksis.jpg" alt="Foto 5">
+      <img src="https://chaturap.github.io/goldenjannah/assets/ibueksis.jpg" alt="Foto 5" alt="Foto 5">
     </div>
   </section>
 
