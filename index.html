@@ -9,8 +9,21 @@
     header, footer {
       background-color: #d4af37;
       padding: 1em;
-      text-align: center;
       color: white;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo img {
+      height: 50px;
     }
     nav {
       display: flex;
@@ -72,6 +85,14 @@
       .gallery img {
         width: 150px;
       }
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      .logo {
+        justify-content: center;
+        margin-bottom: 10px;
+      }
     }
     @media (max-width: 480px) {
       header h1 {
@@ -86,7 +107,10 @@
 <body>
 
   <header>
-    <h1>Golden Jannah Travel Umrah</h1>
+    <div class="logo">
+      <img src="https://chaturap.github.io/goldenjannah/assets/logo.png" alt="Logo Golden Jannah">
+      <h1>Golden Jannah Travel Umrah</h1>
+    </div>
     <nav>
       <a href="#profil">Profil</a>
       <a href="#galeri">Galeri</a>
