@@ -9,10 +9,25 @@
     header, footer { background-color: #d4af37; padding: 1em; text-align: center; color: white; }
     nav a { margin: 0 15px; color: white; text-decoration: none; }
     section { padding: 2em; }
-    .gallery img { width: 200px; margin: 10px; border-radius: 10px; }
+    .gallery {
+      display: flex;
+      overflow-x: auto;
+      gap: 10px;
+      scroll-snap-type: x mandatory;
+    }
+    .gallery img {
+      width: 200px;
+      border-radius: 10px;
+      scroll-snap-align: start;
+    }
+    .banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
     .whatsapp-button {
       position: fixed;
-      bottom: 300px; /* dinaikkan dari 20px agar tidak bertumpuk */
+      bottom: 90px;
       right: 20px;
       background-color: #25D366;
       color: white;
@@ -20,7 +35,7 @@
       border-radius: 50px;
       text-decoration: none;
       font-weight: bold;
-      z-index: 10001; /* lebih tinggi dari live chat */
+      z-index: 10001;
     }
   </style>
 </head>
@@ -36,6 +51,10 @@
     </nav>
   </header>
 
+  <div class="banner">
+    <img src="/assets/header.jpg/1200x400?text=Golden+Jannah+Travel+Umrah" alt="Banner Golden Jannah">
+  </div>
+
   <section id="profil">
     <h2>Profil Perusahaan</h2>
     <p>Golden Jannah adalah biro perjalanan umrah terpercaya yang telah memberangkatkan jamaah dari seluruh Indonesia dengan layanan profesional dan amanah.</p>
@@ -44,9 +63,11 @@
   <section id="galeri">
     <h2>Galeri Umrah</h2>
     <div class="gallery">
-      <img src="https://via.placeholder.com/200x150" alt="Foto 1">
-      <img src="https://via.placeholder.com/200x150" alt="Foto 2">
-      <img src="https://via.placeholder.com/200x150" alt="Foto 3">
+      <img src="/assets/masjid kuba.jpg/200x150" alt="Foto 1">
+      <img src="/assets/paket1.jpg/200x150" alt="Foto 2">
+      <img src="/assets/paket2.jpg/200x150" alt="Foto 3">
+      <img src="/assets/fotodpnkabah.jpg/200x150" alt="Foto 4">
+      <img src="/assets/fotodpnkabah.jpg/200x150" alt="Foto 5">
     </div>
   </section>
 
